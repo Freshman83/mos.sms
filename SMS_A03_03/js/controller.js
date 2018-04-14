@@ -20,12 +20,16 @@ function Controller() {
 	function calculateTip() {
     
 	//Beträge von input Feldern ermitteln und in Variable speichern
-    var betrag = getBetrag();
-    var trinkgeld = getTrinkgeld();
-    var personen = getPerson();
-    
-    model.setResult(betrag, trinkgeld, personen);
-	}
+    var betrag = validateInput(getBetrag());
+    var trinkgeld = validateInput(getTrinkgeld());
+    var personen = parseInt(getPerson(),10);
+    if (isNaN(betrag) || isNaN(trinkgeld)) {
+		alert("Please enter a valid number, i.e. 1.55, 2 or 3.1!");
+    	self.update("","","","","");
+    } else {
+    	model.setResult(betrag, trinkgeld, personen);
+    };
+	};
 
 	self.onLoaded = function() {
 		window.document.getElementById("calculate").addEventListener("click", calculateTip, false);
@@ -40,11 +44,10 @@ function Controller() {
 	};
 	
 	/*
-	 * Aufgabe 2 c)
 	 * Diese Funktion validiert die Eingabe mit Regular Expression
 	 */
 	function validateInput(value) {
-		var pattern = new RegExp(/^[1-9]{1,}(\.\d{0,2})?$/);
+		var pattern = new RegExp(/^[0-9]{1,}(\.\d{0,2})?$/);
 		if (pattern.test(value) === true) {
 			return value;
 		} else {

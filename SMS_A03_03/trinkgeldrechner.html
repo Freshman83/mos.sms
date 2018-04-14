@@ -23,11 +23,11 @@
 				<h1>Trinkgeldrechner</h1>
 			</header>
 			<form>
-				<input type="number" placeholder="Rechnungsbetrag" id="betrag" pattern="[0-9]" min="0.01" step="0.01" required/><br/>
-				<input type="number" placeholder="Trinkgeld (%)" id="trinkgeld" pattern="[0-9]" min="0.0" step="0.1" required/><br/>
-				<input type="number" placeholder="Anzahl Personen" id="personen" pattern="[0-9]" min="1" required/><br/>
+				<input type="number" placeholder="Rechnungsbetrag" id="betrag" min="0.01" step="0.01" required/><br/>
+				<input type="number" placeholder="Trinkgeld (%)" id="trinkgeld" min="0.00" step="0.01" required/><br/>
+				<input type="number" placeholder="Anzahl Personen" id="personen" min="1" step="1" required/><br/>
 				<p>
-				<input id="calculate" type="button" value="Zeige Trinkgeld"><br>
+				<input id="calculate" type="button" value="Zeige Trinkgeld"><br/>
 				</p>
 				<label id="total">Gesamtbetrag: </label><br/>
 				<label id="perperson">Betrag je Person: </label><br/>

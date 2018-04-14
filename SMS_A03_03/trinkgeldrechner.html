@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Trinkgeldrechner</title>
+		<meta name="description" content="SMS A03">
+		<meta name="author" content="Sascha Niklas">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link href="style.css" rel="stylesheet" type="text/css" media="screen"/>
+		
+		<script src="js/util.js"></script>
+		<script src="js/model.js"></script>
+		<script src="js/controller.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Trinkgeldrechner</h1>
+			</header>
+			<form>
+				<input type="number" placeholder="Rechnungsbetrag" id="betrag" pattern="[0-9]" min="0.01" step="0.01" required/><br/>
+				<input type="number" placeholder="Trinkgeld (%)" id="trinkgeld" pattern="[0-9]" min="0.0" step="0.1" required/><br/>
+				<input type="number" placeholder="Anzahl Personen" id="personen" pattern="[0-9]" min="1" required/><br/>
+				<p>
+				<input id="calculate" type="button" value="Zeige Trinkgeld"><br>
+				</p>
+				<label id="total">Gesamtbetrag: </label><br/>
+				<label id="perperson">Betrag je Person: </label><br/>
+				<label id="tip">Trinkgeld: </label><br>
+				<label id="tipperperson">Trinkgeld je Person: </label><br/>
+			</form>
+			<footer>
+				<p>
+					&copy; Copyright  by Sascha Niklas 
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

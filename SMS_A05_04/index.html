@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" href="favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Währungsrechner</title>
+		
+		<link rel="stylesheet" href="themes/youngandold.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+		<script src="js/util.js"></script>
+		<script src="js/model.js"></script>
+		<script src="js/controller.js"></script>
+		<script src="js/app.js"></script>
+
+	<!--Getestet mit Chrome, IE und Firefox-->
+	<!--Hinweis: Bei Firefox muss "," statt "." als Dezimalstelle eingegeben werden.-->	
+	<!--Das Ergebnis wird auf 2 Nachkommastellen gerundet.-->
+	</head>
+
+	<body>
+		<div data-theme="c">
+            <div id="pageDiv" data-role="page">
+                <div data-role="header" data-position="inline">
+                	<h1>Währungsrechner</h1>
+				</div>
+ 				<div data-role="content">
+					<form>
+						<table>
+							<tr>
+								<td>Schweizer Franken: </td>
+								<td>
+									<input data-clear-btn="true" placeholder="Schweizer Franken CHF" type="number" size="30" id="chfIN" required>
+									<!--<input type="range" name="slider" id="slider" value="1" min="0" max="10000" />-->
+								</td>
+							</tr>
+							<tr>
+								<td>Euro: </td>
+								<td>
+									<input type="text" size="30" id="euroIN" readonly >
+								</td>
+							</tr>
+						</table>
+						<br>
+						<button id="convertBN" type="button">Convert</button>
+					</form>
+				</div>	
+				<div data-role="footer">
+					<div data-role="navbar">
+						<ul>
+						<li>
+						<a data-icon="check" href="#" class="ui-btn-active" onclick="changeTheme('b');">Kind</a>
+						</li>
+						<li>
+							<a data-icon="check" href="#" onclick="changeTheme('a');">Alte Dame</a>
+						</li>
+						<li>
+							<a data-icon="info" href="./about.html">About</a>
+						</li>
+						<li>
+							<a data-icon="home" href="./index.html">Home</a>
+						</li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -24,7 +24,7 @@
 
 	<body>
 		<div data-theme="c">
-            <div id="pageDiv" data-role="page">
+            <div id="converter" data-role="page">
                 <div data-role="header" data-position="inline">
                 	<h1>Währungsrechner</h1>
 				</div>
@@ -53,16 +53,16 @@
 					<div data-role="navbar">
 						<ul>
 						<li>
-						<a data-icon="check" href="#" class="ui-btn-active" onclick="changeTheme('b');">Kind</a>
+							<a data-icon="check" class="ui-btn-active" href="#" onclick="changeTheme('a');">Alte Dame</a>
 						</li>
 						<li>
-							<a data-icon="check" href="#" onclick="changeTheme('a');">Alte Dame</a>
+						<a data-icon="check" data-transition="slideup" href="#" onclick="changeTheme('b');">Kind</a>
 						</li>
 						<li>
-							<a data-icon="info" href="./about.html">About</a>
+							<a data-icon="info" data-transition="slide" href="./about.html">About</a>
 						</li>
 						<li>
-							<a data-icon="home" href="./index.html">Home</a>
+							<a data-icon="home" data-transition="slideup" href="./index.html">Home</a>
 						</li>
 						</ul>
 				</div>
